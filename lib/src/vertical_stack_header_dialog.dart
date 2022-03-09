@@ -18,10 +18,12 @@ class VerticalStackDialog extends StatelessWidget {
   final Color? dialogBackgroundColor;
   final BorderSide? borderSide;
   final BorderRadiusGeometry? borderRadius;
+  final double? headerRadius;
 
   const VerticalStackDialog({
     Key? key,
     this.title,
+    this.headerRadius,
     this.desc,
     this.btnOk,
     this.btnCancel,
@@ -141,7 +143,7 @@ class VerticalStackDialog extends StatelessWidget {
                     ),
                     child: CircleAvatar(
                       backgroundColor: dialogBackgroundColor ?? theme.cardColor,
-                      radius: 55.0,
+                      radius: headerRadius ?? 30,
                       child: header,
                     ),
                   ),
